@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <title>Proyectos</title>
+        <meta charset="UTF-8">
+        <!-- indica caracteres del teclado latam  -->
+    </head>
+    <body>
+       <h1>Sección de proyectos</h1>
+       <a href="./../index.html"> Inicio </a>
+       <img src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg" alt="Una gata">
+       <form action="">
+            <fieldset>
+            <div>
+                <label for="nombre"> Nombre: </label>
+                <input type="text" id="nombre" placeholder="Alex">
+                <!-- placeholder gris de fondo, value pone algo ya escrito -->
+                <!-- required para que sea obligatorio -->
+            </div>
+            <div>
+                <label for="apellido"> Apellido: </label>
+                <input type="text" name="" id="apellido">
+                <!-- id es único por página  -->
+            </div>
+            <div>
+                <label for="password"> Password: </label>
+                <input type="password" name="" id="password">
+            </div>
+            <div>
+                <h3> Género</h3>
+                <label for="femenino"> Femenino: </label>
+                <input type="radio" id="femenino" name="genero">
+                <label for="masculino"> Masculino: </label>
+                <input type="radio" name="" id="masculino" name="genero">
+                <label for="otro"> Otro: </label>
+                <input type="radio" id="otro" name="genero">
+                <!-- cuando tienen el mismo name= se puede elegir solo uno -->
+            </div>
+            <div>
+                <h3> Lenguajes que conoces </h3>
+                <label for="ingles"> Inglés </label>
+                <input type="checkbox" id="ingles" name="lenguajes">
+                <label for="español"> Español </label>
+                <input type="checkbox" id="español" name="lenguajes">
+                <label for="aleman"> Alemán </label>
+                <input type="checkbox" id="aleman" name="lenguajes">
+            </div>
+            <div>
+                <label for="pais"> País de residencia:</label>
+                <select name="" id="pais"></select>
+                    <option value="PA"> Paraguay</option>
+                    <option value="ME"> México </option>
+                    <option value="US"> USA</option>
+                    <option value="CA"> Canadá </option>
+
+            </div>
+            <div>
+                <label for="comentarios"> Déjanos tu comentario</label>
+                <textarea id="comentarios"></textarea>
+                <!-- caja grande para meter texto -->
+
+            </div>
+            <button>
+                Enviar 
+            </button>
+        </fieldset>
+       </form>
+    </body>
+</html>

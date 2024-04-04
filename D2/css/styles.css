@@ -1,0 +1,68 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #4F545F;
+}
+
+h1{
+    background-color: aquamarine;
+    color: white;
+    padding: 20px; /* 4 lados */
+    /* padding: 200px 100px; arriba/abajo izquierda/derecha */
+    /* padding: 20px 50px 100px 200px; arriba, der, aba, izq */
+    margin: 0px;
+
+}
+
+fieldset{
+    border: 2px dashed #DDDDDD;
+    margin: 20px;
+    padding: 20px;
+}
+
+legend{
+    font-weight: bold;
+
+}
+
+.formElement{
+    width: 300px;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+#information{
+    border: 1px solid #627BB0;
+    padding: 20px 40px;
+    display: block;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.submissionButtons{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #627BB0;
+    color: white;
+    border-radius: 5px;
+    /* también puede ser porcentaje */
+
+}
+
+.special{
+    background-color: green;
+}
+
+.submissionButtons:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+
+
+/* si estuviese al revés sobreescribe */
+/* id sobre clase en jerarquía */
+
+
+
