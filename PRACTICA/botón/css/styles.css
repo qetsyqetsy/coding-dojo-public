@@ -1,0 +1,31 @@
+#search{
+    color: green;
+    background-color: white;
+    width: 120px;
+    border-radius: 60px;
+    border: 2px solid green;
+    border-color: green;
+    margin: 20px;
+}
+
+#plus{
+    color: white;
+    background-color: darkcyan;
+    font-size: x-large;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid darkcyan;
+}
+
+#account{
+    color: white;
+    background-color: darkkhaki;
+    width: 120px;
+    height: 30px;
+    margin: 20px;
+    border-color: #000000;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0 #000000; /* x-offset y-offset blur-radius color  */
+}
