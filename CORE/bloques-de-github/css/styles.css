@@ -1,0 +1,29 @@
+img.octocat {
+    height: 200px;
+}
+
+.row-red{
+    background-color: red;
+}
+
+.row-green {
+    background-color: green;
+}
+
+.row-white {
+    background-color: white;
+}
+
+.row{
+    margin: 20px;
+    height: 240px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-evenly;
+}
+
+h1{
+    text-align: center;
+    font-family: sans-serif;
+    color: blue;
+}
