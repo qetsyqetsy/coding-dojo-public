@@ -1,0 +1,103 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#ficha {
+    border: 2px solid lightgray;
+    height: 240px;
+    width: 500px;
+    position: relative;
+}
+
+#bloque1{
+    background-color: rgb(47, 223, 223);
+    height: 60px;
+    width: 504px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+#profile {
+    border: 2px solid lightgray;
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: 40px;
+    margin-left: 20px;
+    position: absolute;
+    top: -2px;
+}
+
+#pic {
+    transform: scale(25%);
+    position: relative;
+    margin: -92px;
+}
+
+#nombre {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: flex-end;
+    margin-top: 115px;
+    margin-left: 16px;
+}
+
+#location {
+    transform: scale(20%);
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    margin-left: -5px;
+    bottom: 0;
+    margin-bottom: 49px;
+}
+
+#ciudad {
+    margin-left: 35px;
+    margin-top: 8px;
+}
+
+#roles {
+    font-size: small;
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+#descripcion {
+    font-size: small;
+    margin-left: 16px;
+    margin-top: 0;
+}
+
+#gear {
+    transform: scale(15%);
+}
+
+#edit {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 140px;
+}
+
+#gear-edit {
+    display: flex;
+    justify-content: left;
+}
+
+a {
+    margin-left: -18px;
+}
+
+#text {
+    margin-left: -29px;
+}
