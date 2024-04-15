@@ -1,0 +1,404 @@
+header {
+  background-color: black;
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.nav-item {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+#main-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 230px;
+  margin-left: -50px;
+  margin-top: 10px;
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+  width: 675px;
+}
+
+#profile-name {
+  padding-right: 15px;
+}
+
+#sign-out {
+  margin-left: -100px;
+}
+
+#sign-out-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+  width: 100px;
+  margin-right: -10px;
+}
+
+.column {
+  display: flex;
+  /* border: 2px solid black; */
+  width: 400px;
+  height: 650px;
+  float: inline-start;
+  margin-top: 50px;
+  /* margin-left: 303px; */
+}
+
+.b {
+  margin-left: 22px;
+  width: 250px;
+  flex-wrap: wrap;
+}
+
+.a {
+  flex-wrap: wrap;
+}
+
+.profile-info {
+  border: 3px solid black;
+  width: 400px;
+  height: 300px;
+}
+
+/* EDUCATION */
+
+.education {
+  border: 3px solid black;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 60px;
+
+}
+
+.education .info-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.education h3, h4, p {
+  margin: 2px 0px;
+
+}
+
+.education .subtitle-2 {
+  color: gray;
+  font-size: medium;
+}
+
+.education p {
+  font-size: small;
+}
+
+.connection-requests {
+  border: 2px solid black;
+  width: 250px;
+  height: 200px;
+}
+
+.counter {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.your-connections {
+  border: 2px solid black;
+  width: 250px;
+  height: 400px;
+  margin-bottom: 0;
+}
+
+.your-connections .counter {
+  width: 50px;
+  height: 42px;
+
+}
+
+.profile-info .bar {
+  top: -3px;
+  width: 406px !important;
+  left: -3px;
+}
+
+.a .bar {
+  /* border: 2px solid blue; */
+  background-color: rgb(123, 165, 132);
+  position: relative;
+  height: 100px;
+  width: auto;
+}
+
+.education .bar {
+  /* border: 2px solid blue; */
+  position: relative;
+  top: -3px;
+  height: 50px;
+  width: 406px;
+  left: -3px;
+  display: flex;
+  align-items: center;
+}
+
+.education .title {
+  margin-left: 20px;
+}
+
+.education h3 {
+  margin-top: 20px;
+}
+
+.b .bar {
+  border: 2px solid blue;
+  height: 60px;
+  width: auto;
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  /* border: 3px solid green; */
+  background-color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: 0;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-circle {
+  display: flex;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 20px;
+  top: -40px;
+  border: 3px solid rgb(177, 87, 162);
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#name {
+  margin-left: 20px;
+  /* margin-bottom: 300px; */
+  position: relative;
+  top: -50px;
+}
+
+.map {
+  transform: scale(30%);
+  position: relative;
+  top: -90px;
+}
+
+.city {
+  position: absolute;
+  top: 335px;
+  margin-left: 45px;
+}
+
+#profile-pic {
+  transform: scale(60%);
+}
+
+.profile-info .info-text {
+  display: block;
+  position: relative;
+  top: -110px;
+  margin-left: 20px;
+  justify-content: left;
+}
+
+.profile-info .info-text p {
+  margin: 0;
+  font-size: small;
+
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.edit img {
+  transform: scale(20%);
+
+}
+
+.edit {
+  transform: scale(80%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -130px;
+  right: 45px;
+}
+
+.edit p {
+  font-size: 15px;
+  display: flex;
+  position: relative;
+  right: 20px;
+}
+
+/* CONNECTION REQUESTS  */
+
+
+.connection-requests .bar {
+  position: relative;
+  top: -3px;
+  width: 251px;
+  left: -3px;
+  background-color: rgb(123, 165, 132);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connection-requests {
+  border: 3px solid black;
+  display: fle;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 245px;
+
+}
+
+.connection-requests .title {
+  margin-left: 20px;
+  font-size: medium;
+
+}
+
+.connection-requests .lines {
+  display: flex;
+  margin-left: 20px;
+  flex-wrap: wrap;
+
+}
+
+.connection-requests .first {
+  display: flex;
+  transform: scale(70%);
+  align-items: center;
+  position: relative;
+  right: 80px;
+  bottom: 30px;
+}
+
+.connection-requests .first p {
+  width: 60px;
+}
+
+.connection-requests .icon, .pic {
+  transform: scale(30%);
+}
+
+.connection-requests .second {
+  display: flex;
+  transform: scale(70%);
+  align-items: center;
+  position: relative;
+  right: 80px;
+  bottom: 30px;
+  top: -100px;
+}
+
+.connection-requests .second p {
+  width: 60px;
+}
+
+/* YOUR CONNECTIONS */
+
+.your-connections {
+  margin-top: 25px;
+  border: 3px solid black;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 245px;
+  /* overflow: hidden; Optional: Add overflow hidden to hide the overflowing part of the bar */
+}
+
+.your-connections .bar {
+  position: absolute;
+  /* Change to absolute positioning */
+  top: -3px;
+  width: calc(100% + 6px);
+  /* Adjust the width to cover the entire parent width */
+  left: -3px;
+  background-color: rgb(123, 165, 132);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.your-connections .title {
+  margin-left: 20px;
+  font-size: medium;
+
+}
+
+.your-connections .lines {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-right: 100px;
+}
+
+.your-connections .line {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 70px;
+}
+
+
+
+.sub-caja {
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: left;
+  margin-top: 30px;
+  width: 251px;
+}
+
+.sub-caja a {
+  margin-left: 20px;
+}
