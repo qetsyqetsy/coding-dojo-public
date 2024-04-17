@@ -1,0 +1,112 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+    height: 69px;
+    align-items: center;
+    padding: 0 40px;
+
+}
+
+#main {
+    /* Main Container */
+    /* border: 2px solid black; */
+    display: flex;
+    margin: 0 5%;
+}
+
+/* Columns */
+
+.col {
+    /* border: 2px solid black; */
+}
+
+.l {
+    /* border: 2px solid black; */
+    flex: 2;
+}
+
+.r {
+    /* border: 2px solid black; */
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+/* Boxes */
+
+.box {
+    /* All boxes */
+    margin: 5%;
+    padding: 5%;
+
+}
+
+.meaning {
+    /* Word Meaning Boxes */
+    transform: scale(140%);
+    margin: 14%;
+    margin-left: 114px;
+
+}
+
+.meaningA, .meaningB {
+    border: 2px solid black;
+}
+
+.meaningB{
+    margin-top: 165px;
+}
+
+.add-def {
+    /* Add Definition Box */
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 20%;
+    margin-right: 12%;
+    transform: scale(140%);
+    border: 2px solid black;
+}
+
+/* Buttons */
+
+.btn {
+    /* Main Button Class */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.log {
+    /* Login/Logout Button */
+
+}
+
+.like {
+    /* Likes Button */
+
+}
+
+.def {
+    /* Add Definition Button */
+
+}
