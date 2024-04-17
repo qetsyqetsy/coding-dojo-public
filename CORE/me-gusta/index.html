@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Network</h1>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <img src="https://xsgames.co/randomusers/assets/images/favicon.png" alt="Avatar">
+            <a href="#">Add an avatar</a>
+            <p>James Doe</p>
+        </div>
+        <div class="right-column">
+            <h2>Your Feed</h2>
+            <div class="feed-box">
+                <div class="feed-item">
+                    <p><strong>John Smith</strong> - <span id="like-count-1">0</span> like(s) <button onclick="updateLikeCount(1)">Like</button></p>
+                    <p>This is a short text. <a href="#">Read more</a></p>
+                </div>
+                <div class="feed-item">
+                    <p><strong>Jane Doe</strong> - <span id="like-count-2">0</span> like(s) <button onclick="updateLikeCount(2)">Like</button></p>
+                    <p>This is another short text. <a href="#">Read more</a></p>
+                </div>
+                <div class="feed-item">
+                    <p><strong>Michael Johnson</strong> - <span id="like-count-3">0</span> like(s) <button onclick="updateLikeCount(3)">Like</button></p>
+                    <p>Yet another short text. <a href="#">Read more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</html>
