@@ -1,1 +1,1 @@
-https://github.com/qetsyqetsy/coding-dojo-public/tree/main/PRACTICA/video-preview
+https://qetsyqetsy.github.io/coding-dojo-public/PRACTICA/video-preview/index.html
