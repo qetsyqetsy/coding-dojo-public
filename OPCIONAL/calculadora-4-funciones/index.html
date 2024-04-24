@@ -12,36 +12,35 @@
     <div id="calculator">
         <div id="display">0</div>
         <div class="row">
-            <button data-key="7" onclick="press(7);">7</button>
-            <button data-key="8"onclick="press(8);">8</button>
-            <button data-key="9"onclick="press(9);">9</button>
-            <button data-key="/"class="operator" onclick="setOP('/');">÷</button>
+            <button data-key="7" aria-label="Number 7">7</button>
+            <button data-key="8" aria-label="Number 8">8</button>
+            <button data-key="9" aria-label="Number 9" >9</button>
+            <button data-key="/"class="operator" aria-label="Divide" >÷</button>
         </div>
         <div class="row">
-            <button data-key="4"onclick="press(4);">4</button>
-            <button data-key="5"onclick="press(5);">5</button>
-            <button data-key="6"onclick="press(6);">6</button>
-            <button data-key="*"class="operator" onclick="setOP('*');">×</button>
+            <button data-key="4" aria-label="Number 4" >4</button>
+            <button data-key="5" aria-label="Number 5" >5</button>
+            <button data-key="6" aria-label="Number 6" >6</button>
+            <button data-key="*"class="operator" aria-label="Multiply" >×</button>
         </div>
         <div class="row">
-            <button data-key="1"onclick="press(1);">1</button>
-            <button data-key="2"onclick="press(2);">2</button>
-            <button data-key="3"onclick="press(3);">3</button>
-            <button data-key="-"class="operator" onclick="setOP('-');">−</button>
+            <button data-key="1" aria-label="Number 1" >1</button>
+            <button data-key="2" aria-label="Number 2" >2</button>
+            <button data-key="3" aria-label="Number 3" >3</button>
+            <button data-key="-"class="operator" aria-label="Subtract" >−</button>
         </div>
         <div class="row">
-            <button data-key="Escape"onclick="clr();">C</button>
-            <button data-key="0"onclick="press(0);">0</button>
-            <button data-key="."onclick="press('.');">.</button>
-            <button data-key="`+"class="operator" onclick="setOP('+');">+</button>
+            <button data-key="clear" aria-label="Clear" >C</button>
+            <button data-key="0" aria-label="Number 0" >0</button>
+            <button data-key="." aria-label="Decimal Point" >.</button>
+            <button data-key="+"class="operator" aria-label="Add" >+</button>
         </div>
         <div class="row">
-            <button data-key="Enter"id="equals" onclick="calculate()">=</button>
+            <button data-key="Enter" id="equals" aria-label="Equals" >=</button>
         </div>
     </div>
     <div>
         <script src="./js/script.js"></script>
 </body>
-
 
 </html>
