@@ -10,7 +10,6 @@ let { currentInput, operator, memory, inputMode } = initialState;
 
 // Function to handle number input
 function press(key) {
-<<<<<<< HEAD
 
     if (inputMode === 'mouse' || !['keyboard', 'mouse'].includes(inputMode)) {
         currentInput = currentInput === '0' && key !== '.' ? key : currentInput + key;
@@ -34,87 +33,28 @@ function press(key) {
     removeFocus();
 
 }
-=======
-    if (inputMode === 'mouse' || !['keyboard', 'mouse'].includes(inputMode)) {
-        currentInput = currentInput === '0' && key !== '.' ? key : currentInput + key;
-        inputMode = 'keyboard'; // Set input mode to keyboard
-    }
-
-    if (key === '.' && currentInput.includes('.')) {
-        return; // Do not add another decimal point
-    }
-    const button = document.querySelector(`[data-key="${key}"]`);
-    console.log(button)
-    button.style.backgroundColor = 'skyblue';
-    setTimeout(() => {
-        button.style.backgroundColor = '';
-    }, 100);
-
-
-   /*  button.addEventListener('keydown', (event) => {
-        console.log(key);
-        button.style.backgroundColor = 'black'; 
-        
-        setTimeout(() => {
-            button.style.backgroundColor = '';
-        }, 1000);
-    }) */
-    updateDisplay();
-    removeFocus();
-
-    
-
-
-    
-
-
-}
-
-
->>>>>>> 30dd4cf0aedeab039173d6ba96bb3d2c08da4afd
 
 // Function to set the operator for calculations
 function setOperator(op) {
     operator = op;
     memory = currentInput;
     currentInput = '0';
-<<<<<<< HEAD
 
     const button = document.querySelector(`[data-key="${op}"]`);
     highlightButton(button);
 
     removeFocus();
-=======
-    removeFocus();
-    const button = document.querySelector(`[data-key="${op}"]`);
-    console.log(button)
-    button.style.backgroundColor = 'skyblue';
-    setTimeout(() => {
-        button.style.backgroundColor = '';
-    }, 100);
->>>>>>> 30dd4cf0aedeab039173d6ba96bb3d2c08da4afd
 }
 
 // Function to clear the current input
 function clearInput() {
     ({ currentInput, memory, inputMode } = initialState);
-<<<<<<< HEAD
 
     const button = document.querySelector(`[data-key="clear"]`);
     highlightButton(button);
 
     updateDisplay();
     removeFocus();
-=======
-    updateDisplay();
-    removeFocus();
-    const button = document.querySelector(`[data-key="clear"]`);
-    console.log(button)
-    button.style.backgroundColor = 'skyblue';
-    setTimeout(() => {
-        button.style.backgroundColor = '';
-    }, 100);
->>>>>>> 30dd4cf0aedeab039173d6ba96bb3d2c08da4afd
 }
 
 // Function to perform calculations based on the operator
@@ -139,18 +79,9 @@ function calculate() {
     currentInput = result.toString();
     updateDisplay();
     removeFocus();
-<<<<<<< HEAD
 
     const button = document.querySelector(`[data-key="Enter"]`);
     highlightButton(button);
-=======
-    const button = document.querySelector(`[data-key="Enter"]`);
-    console.log(button)
-    button.style.backgroundColor = 'skyblue';
-    setTimeout(() => {
-        button.style.backgroundColor = '';
-    }, 100);
->>>>>>> 30dd4cf0aedeab039173d6ba96bb3d2c08da4afd
 }
 
 // Function to update the display with the current input
@@ -162,7 +93,6 @@ function updateDisplay() {
 function removeFocus() {
     document.activeElement.blur();
 }
-<<<<<<< HEAD
 
 // Function to highlight the button temporarily
 function highlightButton(button) {
@@ -215,49 +145,6 @@ document.addEventListener('keydown', (event) => {
         console.log('Decimal key pressed');
         inputMode = 'mouse'; // set input mode to keyboard
         press(key);
-=======
-
-
-// Add event listeners for button clicks
-document.querySelectorAll('button[data-key]').forEach(button => {
-    button.addEventListener('click', () => {
-        const key = button.getAttribute('data-key');
-        if (key === 'clear') {
-            clearInput();
-        } else if (key === 'Enter') {
-            calculate();
-        } else {
-            inputMode = 'mouse'; // set input mode to mouse
-            if (['+', '-', '*', '/'].includes(key)) {
-                setOperator(key);
-            } else {
-                console.log("Valid key pressed:", key);
-                press(key);
-            }
-        }
-    });
-});
-
-// Add event listener for keystrokes
-document.addEventListener('keydown', event => {
-    const key = event.key; // Get the string representation of the pressed key
-
-    console.log("Key pressed:", key); // Log the pressed key for debugging
-
-    if (key === 'Enter') {
-        console.log("Enter key pressed");
-        calculate();
-    } else if (key === 'Escape') {
-        console.log("Escape key pressed");
-        clearInput();
-    } else if (/\d/.test(key)) {
-        console.log("Valid key pressed:", key);
-        inputMode = 'mouse'; // set input mode to keyboard
-        press(key); // Pass the pressed key to the press function
-    } else if (['+', '-', '*', '/'].includes(key)) {
-        console.log("Operator key pressed:", key);
-        setOperator(key);
->>>>>>> 30dd4cf0aedeab039173d6ba96bb3d2c08da4afd
     }
 });
 
