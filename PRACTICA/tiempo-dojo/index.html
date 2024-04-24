@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>TiempoDojo</title>
+</head>
+
+<body>
+    <header>
+        <h1>TiempoDojo</h1>
+        <div id="cities">
+            <h2 class="cityName">Burbank</h2>
+            <h2 class="cityName">Chicago</h2>
+            <h2 class="cityName">Dallas</h2>
+        </div>
+    </header>
+    <main>
+        <!-- TITLE BAR -->
+        <div id="titleBar">
+            <h2>San Jose</h2>
+            <div id="temperature">
+                <span style="white-space: nowrap;">show temperature in</span>
+                <select name="tempSelector" id="tempSelector">
+                    <option value="celsius">C°</option>
+                    <option value="fahrenheit">F°</option>
+                </select>
+            </div>
+        </div>
+        <!-- BOXES -->
+        <div id="boxContainer">
+            <div class="box">
+                <h3>Today</h3>
+                <div class="imgContainer">
+                    <img src="./assets/some_rain.png" alt="">
+                </div>
+                <p class="description">some rain</p>
+                <div class="numbers"><span class="maxTemp">24°</span><span class="minTemp">18°</span></div>
+            </div>
+            <div class="box">
+                <h3>Tomorrow</h3>
+                <div class="imgContainer">
+                    <img src="./assets/some_sun.png" alt="">
+                </div>
+                <p class="description">some sun</p>
+                <div class="numbers"><span class="maxTemp">27°</span><span class="minTemp">19°</span></div>
+            </div>
+            <div class="box">
+                <h3>Friday</h3>
+                <div class="imgContainer">
+                    <img src="./assets/some_clouds.png" alt="">
+                </div>
+                <p class="description">some clouds</p>
+                <div class="numbers"><span class="maxTemp">21°</span><span class="minTemp">16°</span></div>
+            </div>
+            <div class="box">
+                <h3>Saturday</h3>
+                <div class="imgContainer">
+                    <img src="./assets/some_sun.png" alt="">
+                </div>
+                <p class="description">some sun</p>
+                <div class="numbers"><span class="maxTemp">26°</span><span class="minTemp">21°</span></div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- COOKIES NOTICE -->
+    <div id="cookiesNotice" class="cookies-container">
+        <img src="./assets/cookie.png" alt="cookie icon" class="cookie-icon">
+        <div class="text-container">
+            <h4>Stop! Cookie Time</h4>
+            <p>We use cookies (sadly not edible ones) to personalize content and ads,
+                to provide social media features and to analyse our traffic. <a href="https://google.com">
+                    Read more...
+                </a>
+            </p>
+        </div>
+        <button id="cookieBtn">I Accept</button>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

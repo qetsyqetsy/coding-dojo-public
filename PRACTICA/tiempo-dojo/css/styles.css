@@ -1,0 +1,125 @@
+* {
+    font-family: sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-color: skyblue;
+    color: #fff;
+    padding: 0 150px;
+    margin: -8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cities {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cities h2 {
+    padding: 0 0px 0 40px;}
+
+/* MAIN */
+
+#titleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin: 0 140px;
+}
+
+#titleBar h2 {
+    width: 200px;
+}
+
+#temperature {
+    display: flex;
+    width: 200px;
+    justify-content: flex-end;
+    }
+
+#tempSelector {
+    margin-left: 20px;
+}
+
+/* BOXES */
+
+#boxContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 140px;
+    margin-top: 50px;
+}
+
+.box {
+    /* border: 2px solid blue; */
+    height: 500px;
+    width: 280px;
+    background-color: lightgray;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.imgContainer img {
+    border-radius: 50%;
+}
+
+h3 {
+    text-align: center; 
+    font-size:xx-large;
+}
+
+.box p { 
+    text-align: center;
+    font-weight: bold;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.maxTemp {
+    color: red;
+}
+
+.minTemp {
+    color: blue;
+}
+
+/* COOKIE NOTICE */
+
+.cookies-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    margin: 20px auto;
+    background-color: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cookie-icon {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.text-container {
+    flex-grow: 1; /* Allow the text container to grow and occupy available space */
+}
+
+#cookieBtn {
+    margin-left: auto; /* Push the button to the right */
+}
