@@ -1,24 +1,23 @@
-import React, {useState} from 'react';
-import Form from './components/Form';
-import Results from './components/Results';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'; // Importing necessary modules from React library
+import Form from './components/Form'; // Importing the Form component
+import Results from './components/Results'; // Importing the Results component
+import './App.css'; // Importing the CSS file for styling
 
-function App() {
+const App = () => {
+    const [inputs, setInputs] = useState({ // Initializing state variables for form inputs
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+    });
 
-  const [ state, setState] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: ""
-  });
-  return (
-    <div className="App">
-      <Form inputs={state} setInputs={setState} />
-      <Results data={state}  />
-    </div>
-  );
+    return (
+        <div className="App"> {/* Main container for the application */}
+            <Form inputs={inputs} setInputs={setInputs} /> {/* Rendering the Form component with input data */}
+            {/* <Results data={inputs} /> */} {/* Results component commented out for now */}
+        </div>
+    );
 }
 
-export default App;
+export default App; // Exporting the App component as the default export
