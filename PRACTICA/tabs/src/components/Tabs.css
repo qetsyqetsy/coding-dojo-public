@@ -1,0 +1,40 @@
+/* Tabs.css */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* Ajusta según sea necesario */
+}
+
+.tab-headers {
+  display: flex;
+  background-color: #f0f0f0;
+}
+
+.tab-header {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-header.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
+/* Animación CSS para el cambio de pestaña */
+.tab-content {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.tab-content.hidden {
+  opacity: 0;
+}
