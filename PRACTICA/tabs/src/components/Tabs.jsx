@@ -5,6 +5,7 @@ import './Tabs.css';
 const Tabs = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
+  // Ensure tab content visibility is updated when activeTab changes
   useEffect(() => {
     const tabContent = document.querySelector('.tab-content');
     if (tabContent) {
@@ -12,6 +13,7 @@ const Tabs = ({ tabs }) => {
     }
   }, [activeTab]);
 
+  // Handle tab click event
   const handleTabClick = (index, onClick) => {
     const tabContent = document.querySelector('.tab-content');
     if (tabContent) {
@@ -21,6 +23,7 @@ const Tabs = ({ tabs }) => {
       }, 300);
     }
 
+    // Invoke the onClick function if provided
     if (onClick) {
       onClick();
     }
