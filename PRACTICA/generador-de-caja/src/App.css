@@ -1,0 +1,67 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; /* Increased margin-top */
+  padding: 20px;
+  background-color: green;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.color-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap */
+  margin-bottom: 30px; /* Increased margin-bottom */
+  width: 100%;
+  max-width: 600px; /* Limit form width */
+}
+
+.color-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-input,
+.size-input {
+  padding: 15px; /* Increased padding */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  flex: 1; /* Fill available space */
+}
+
+.add-button {
+  padding: 15px 30px; /* Increased padding */
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px; /* Increased margin-top */
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.color-block-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap */
+  justify-content: center; /* Center align blocks */
+  max-width: 600px; /* Limit container width */
+}
+
+.color-block {
+  border: 1px solid #333;
+  flex: 0 0 auto;
+  margin-bottom: 30px; /* Increased margin-bottom */
+}
