@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import React, { useState } from 'react';
 import Navbar from './Navbar';
@@ -10,7 +11,7 @@ const Wrapper = () => {
     return (
         <UserContext.Provider value={{ username, setUsername }}>
             <div>
-                
+
                 <Navbar />
                 <FormWrapper />
             </div>
