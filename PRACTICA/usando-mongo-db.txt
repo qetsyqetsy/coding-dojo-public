@@ -1,0 +1,459 @@
+test> use my_first_db
+switched to db my_first_db
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 }
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 }
+  },
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 }
+  }
+]
+my_first_db> db.estudiantes.insert({name: "Dolores", home_state: "N/A", lucky_number: 12, birthday: {month: 5, day: 20, year: 1984}})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('665fff9a1678d745e4cdcdf6') }
+}
+my_first_db> db.estudiantes.insert({name: "Agnes", home_state: "Washington", lucky_number: 12, birthday: {month: 7, day: 25, year: 1784}})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('665fffcc1678d745e4cdcdf7') }
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 }
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 }
+  },
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 }
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    lucky_number: 12,
+    birthday: { month: 5, day: 20, year: 1984 }
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 }
+  }
+]
+...     _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+...     name: 'Agnes',
+...     home_state: 'Washington',
+...     lucky_number: 12,
+...     birthday: { month: 7, day: 25, year: 1784 }
+...   }  {
+Uncaught:
+SyntaxError: Missing semicolon. (3:8)
+
+  1 |   {
+  2 |     _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+> 3 |     name: 'Agnes',
+    |         ^
+  4 |     home_state: 'Washington',
+  5 |     lucky_number: 12,
+  6 |     birthday: { month: 7, day: 25, year: 1784 }
+
+
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 }
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 }
+  },
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 }
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    lucky_number: 12,
+    birthday: { month: 5, day: 20, year: 1984 }
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 }
+  }
+]
+my_first_db> db.students.find({home_state: "Washington"}).pretty()
+
+my_first_db> db.estudiantes.find({home_state: "Washington"}).pretty()
+[
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 }
+  }
+]
+my_first_db> db.estudiantes.find({ lucky_number: { $lte: 10 }})
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 }
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 }
+  }
+]
+my_first_db> db.estudiantes.find({ lucky_number: { $gte: 1, $lte: 9 }})
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 }
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 }
+  }
+]
+my_first_db> db.estudiantes.updateMany(
+... {},
+... { $set: { intereses: ['codificacion', 'brunch', 'MongoDB'] } }
+... )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    lucky_number: 12,
+    birthday: { month: 5, day: 20, year: 1984 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  }
+]
+my_first_db> db.estudiantes.updateOne(
+... { _id: ObjectId('665fffcc1678d745e4cdcdf7') },
+... { $push: { intereses: 'impuestos' } }
+... )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    lucky_number: 12,
+    birthday: { month: 5, day: 20, year: 1984 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB', 'impuestos' ]
+  }
+]
+my_first_db> db.estudiantes.updateOne( { _id: ObjectId('665fffcc1678d745e4cdcdf7') }, { $pull: { intereses: 'impuestos' } } )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffda599a09f1501cdcdf6'),
+    name: 'Juan',
+    home_state: 'Alabama',
+    lucky_number: 7,
+    birthday: { month: 2, day: 3, year: 2024 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665ffe7e03045aa90fcdcdf6'),
+    name: 'Lucy',
+    home_state: 'CA',
+    lucky_number: 1,
+    birthday: { month: 1, day: 1, year: 1900 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+
+my_first_db> db.estudiantes.findOneAndDelete({ lucky_number: { $gt: 5 }});
+{
+  _id: ObjectId('665ffda599a09f1501cdcdf6'),
+  name: 'Juan',
+  home_state: 'Alabama',
+  lucky_number: 7,
+  birthday: { month: 2, day: 3, year: 2024 },
+  intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    lucky_number: 12,
+    birthday: { month: 5, day: 20, year: 1984 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ]
+  }
+]
+my_first_db> db.estudiantes.updateMany(
+... {},
+... { $set: { number_of_belts: 0 } }
+... )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    lucky_number: 33,
+    birthday: { month: 4, day: 5, year: 2001 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ],
+    number_of_belts: 0
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    lucky_number: 12,
+    birthday: { month: 5, day: 20, year: 1984 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ],
+    number_of_belts: 0
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    lucky_number: 12,
+    birthday: { month: 7, day: 25, year: 1784 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ],
+    number_of_belts: 0
+  }
+]
+my_first_db> db.estudiantes.updateMany(
+... { home_state: "WA"},
+... {  $inc: { number_of_belts: 1 }}
+... )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.updateMany(
+... {},
+... { $unset: { lucky_number: "" }}
+... )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.updateMany(
+... {},
+... { $currentDate: {  updated_on: ture } }
+... )
+ReferenceError: ture is not defined
+my_first_db> db.estudiantes.updateMany( {}, { $currentDate: { updated_on: true
+...
+my_first_db> db.estudiantes.updateMany( {}, { $currentDate: { updated_on: true } } )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+my_first_db> db.estudiantes.find()
+[
+  {
+    _id: ObjectId('665ffecb03045aa90fcdcdf7'),
+    name: 'Pepi',
+    home_state: 'NY',
+    birthday: { month: 4, day: 5, year: 2001 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ],
+    number_of_belts: 0,
+    updated_on: ISODate('2024-06-05T06:22:38.074Z')
+  },
+  {
+    _id: ObjectId('665fff9a1678d745e4cdcdf6'),
+    name: 'Dolores',
+    home_state: 'N/A',
+    birthday: { month: 5, day: 20, year: 1984 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ],
+    number_of_belts: 0,
+    updated_on: ISODate('2024-06-05T06:22:38.074Z')
+  },
+  {
+    _id: ObjectId('665fffcc1678d745e4cdcdf7'),
+    name: 'Agnes',
+    home_state: 'Washington',
+    birthday: { month: 7, day: 25, year: 1784 },
+    intereses: [ 'codificacion', 'brunch', 'MongoDB' ],
+    number_of_belts: 0,
+    updated_on: ISODate('2024-06-05T06:22:38.074Z')
+  }
+]
+my_first_db>
