@@ -9,7 +9,7 @@ export default () => {
         //evitar el comportamiento por defecto de submit
         e.preventDefault();
         //hacer una petición POST para crear una nueva persona
-        axios.post('http://localhost:8000/api/people', {
+        axios.post('http://localhost:8001/api/people', {
             firstName,
             lastName
         })
