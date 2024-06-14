@@ -10,36 +10,28 @@ const AuthorForm = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    if (id === 'new') {
-      // Reset form fields if creating new author
-      setName('');
-      setQuote('');
-      setError('');
-    } else if (id) {
+    if (id) {
       getAuthorById(id)
         .then((res) => {
           setName(res.data.name);
           setQuote(res.data.quote);
-          setError(''); // Clear any previous error message
         })
         .catch((err) => {
-          setError(
-            'Sorry, but we could not find the author you are looking for. Would you like to add this author to our database?'
-          );
+          setError('Author not found');
         });
     }
-  }, [id]); // Added id as a dependency to useEffect
+  }, [id]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const authorData = { name, quote };
 
-    if (id === 'new') {
-      createAuthor(authorData)
+    if (id) {
+      updateAuthor(id, authorData)
         .then(() => navigate('/'))
         .catch((err) => setError(err.response.data.message));
-    } else if (id) {
-      updateAuthor(id, authorData)
+    } else {
+      createAuthor(authorData)
         .then(() => navigate('/'))
         .catch((err) => setError(err.response.data.message));
     }
@@ -51,42 +43,34 @@ const AuthorForm = () => {
 
   return (
     <div>
-      <h2>{id === 'new' ? 'Add Author' : 'Edit Author'}</h2>
+      <h2>{id ? 'Edit Author' : 'Add Author'}</h2>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Quote:
+          <input
+            type="text"
+            value={quote}
+            onChange={(e) => setQuote(e.target.value)}
+          />
+        </label>
+        <br />
+        <button type="submit">{id ? 'Update' : 'Add'}</button>
+        <button type="button" onClick={handleCancel}>Cancel</button>
+      </form>
       {error && (
-        <div>
-          <p style={{ color: 'red' }}>{error}</p>
-          {id !== 'new' && (
-            <p>
-              <Link to="/new">Create new author</Link>
-            </p>
-          )}
-        </div>
-      )}
-      {!error && (
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Quote:
-            <input
-              type="text"
-              value={quote}
-              onChange={(e) => setQuote(e.target.value)}
-            />
-          </label>
-          <br />
-          <button type="submit">{id === 'new' ? 'Add' : 'Update'}</button>
-          <button type="button" onClick={handleCancel}>
-            Cancel
-          </button>
-        </form>
+        <p>
+          An error occured. Clicnk <Link to="/new/">here</Link> to go to the author page.
+        </p>
       )}
     </div>
   );
